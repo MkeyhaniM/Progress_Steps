@@ -1,0 +1,92 @@
+@import "font.css";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div#parentProgress {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 390px;
+    position: relative;
+    margin: 300px 0 0 570px;
+}
+
+div#progressContent {
+    display: flex;
+    justify-content:space-between;
+    width: inherit;
+    max-width: 100%;
+    align-items: center;
+    transition: all 1s cubic-bezier(0, 0.87, 1, 0.95);
+}
+
+div.circle-progress-container {
+    font-size: 18px;
+    margin: 0 100px 0 0;
+    display: flex;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    background-color: darkgrey;
+    border: 3px solid rgba(20, 130, 255, 0.59);
+    z-index: 10;
+}
+
+
+div#parentProgress div#progressContent::before {
+    content: "";
+    background-color: silver;
+    position: absolute;
+    top: 40%;
+    transform: translateY(52%);
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 0;
+    font-family: Yekan;
+}
+
+
+#parentButtons {
+    margin: 50px 0 0 720px;
+}
+
+#parentButtons button {
+    width: 60px;
+    height: 33px;
+    cursor: pointer;
+    border:1px solid black;
+    text-align: center;
+    display: inline-block;
+    font-family: "Vazir";
+    font-size: 17px;
+    background-color: rgba(86,191,229,0.9);
+    border-radius: 5px;
+}
+#parentButtons button div:active {
+    transform: scale(0.98);
+}
+
+#progress-container {
+    width: 0;
+    background-color: deeppink;
+    position: absolute;
+    top: 40%;
+    transform: translateY(52%);
+    left: 0;
+    height: 4px;
+    transition: all 1s cubic-bezier(0, 0.87, 1, 0.95);
+}
+
+.active {
+    background-color: greenyellow !important;
+    color: black !important;
+    border: 2px solid blue !important;
+}
+
+
+
